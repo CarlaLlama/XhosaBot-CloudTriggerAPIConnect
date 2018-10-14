@@ -1,10 +1,17 @@
+var Message = require("./message.js");
 const spawn = require("child_process").spawn;
+var submitResponse = require("./submitResponse.js");
 
-module.exports = function(messageText) {
+module.exports = function(userId, messageText) {
     // Spawn Python script with Message as argument
     const pythonProcess = spawn('python',["controller.py"], userId, messageText);
     pythonProcess.stdout.on('data', (data) => {
-        // Do something with the data returned from python script
+        if(data.startsWith("Data:")){
+            // Remove message header
+            let response = data.split(':')[1].trim();
+            var responseMessage = new Message(messageText);
+            submitResponse(userId, responseMessage);
+        }
     });
 };
 

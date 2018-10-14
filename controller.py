@@ -23,5 +23,5 @@ if message_text is not None:
 # On FAQ matcher response use response_generator to get bot response
 if predicted_label != "":
     output_text = find_by_label(predicted_label)
-    print(output_text)
+    print("Data:" + output_text)
     sys.stdout.flush()
