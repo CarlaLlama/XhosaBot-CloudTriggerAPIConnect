@@ -1,3 +1,10 @@
 const spawn = require("child_process").spawn;
-const pythonProcess = spawn('python',["path/to/script.py", arg1, arg2, ...]);
+
+module.exports = function(messageText) {
+    // Spawn Python script with Message as argument
+    const pythonProcess = spawn('python',["controller.py"], userId, messageText);
+    pythonProcess.stdout.on('data', (data) => {
+        // Do something with the data returned from python script
+    });
+};
 
