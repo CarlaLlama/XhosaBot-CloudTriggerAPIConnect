@@ -1,4 +1,7 @@
 /firebase_auth.py
-/venv/.
-/.idea/.
+venv/*
+.idea/*
+__pycache__/*
+node_modules/*
+functions/node_modules/*
 /xhosabot-firebase-adminsdk-ele7b-e774d3aba6.json

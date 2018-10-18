@@ -1,12 +1,27 @@
-var Message = require("./message.js");
 const admin = require('firebase-admin');
-admin.initializeApp(functions.config().firebase);
+const functions = require("firebase-functions");
 
-module.exports = function(userId, Message) {
-    admin.firestore().collection('{userId}')
-        .add(Message.getSubmittableMessage())
-        .then(writeResult => {
-            console.log("Write completed: " + writeResult);
+admin.initializeApp(functions.config().firebase);
+const db = admin.firestore();
+
+module.exports = function(userId, message) {
+    return new Promise(function(resolve, reject) {
+        let messageObject = {
+            "messageText": message,
+            "messageFromBot": true,
+            "messageSendTime": admin.firestore.Timestamp.now()
+        };
+
+        db.collection(userId)
+            .add(messageObject)
+            .then(writeResult => {
+                console.log("Write completed: " + writeResult.id);
+                resolve(writeResult);
+            }).catch(error => {
+                console.error(error);
+                reject(error);
+        });
     });
 };
+
 
