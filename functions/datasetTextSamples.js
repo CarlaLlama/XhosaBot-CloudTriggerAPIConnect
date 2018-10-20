@@ -141,11 +141,9 @@ module.exports = {
         "uzikhathalele."],
 
         // Response 6:
-        ["ixhesha", "I pre-eclamsia yi high blood pressure xa ukhulelwe kwaye yenzeka emva" +
-        "kweeveki ezingamashumi amabini ( 20 weeks). Ukuyinceda kufanele" +
-        "ufumane u Vitamin D ne Calcium –kwizidlo ezifana nentlanzi nobisi. Nciphisa" +
-        "etyuweni usele amanzi amaninzi. Khumbula ukuphumla ngokwaneleyo kwaye" +
-        "uzikhathalele."],
+        ["ixhesha", "Ngokwesiqhelo ukubeleka kuthatha iiyure ezisibhozo (8 hours), kodwa " +
+        "kungathatha neeyure ezifikelela kwishumi elinesibhozo( 18 hours). Kanye xa" +
+        "uvuleke kangange 10 cm ukulungele ukubeleka."],
 
         // Response 7:
         ["morning_sickness", "Isifo sasekuseni siqulathe ukugabha nokuba nesicaphu-caphu. Isifo" +
@@ -185,7 +183,7 @@ module.exports = {
         // Response 13:
         ["ekliniki", "Ukuba uneentlungu ezinzima ngelixa ukhulelwe okanye emva kokuba" +
         "ukhulelwe kufuneka uye ekliniki. Funa umntu wokusa ukuba udinga uncedo" +
-        "olukhawulezileyo. Ungatsalela nalenombolo yoncedo olukhawulezileyo 112"],
+        "olukhawulezileyo. Ungatsalela nalenombolo yoncedo olukhawulezileyo"],
 
         // Response 14:
         ["dumbileyo", "Imilenze edumbileyo xa ukhulelwe iqhelekile. Ukuzinceda, kufuneka" +
